@@ -354,14 +354,6 @@
 		"opt": 1,
 		"q": 30
 		},
-	"/images/werk/2.JPG.sb-3f08b971-k7yLMi.sb-3f08b971-o0N5o6": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/images/werk/2.JPG.sb-3f08b971-k7yLMi.sb-3f08b971-o0N5o6",
-		"oF": 0
-		},
 	"/images/werk/3.jpg": {
 		"ft": 16384,
 		"iS": 7267976,
@@ -435,12 +427,12 @@
 		"oO": 1,
 		"oS": 0
 		},
-	"/over-ons.kit": {
+	"/over-mij.kit": {
 		"cB": 1,
 		"ft": 2048,
 		"hM": 1,
 		"oA": 0,
-		"oAP": "/build/over-ons.html",
+		"oAP": "/build/over-mij.html",
 		"oF": 0
 		},
 	"/privacy.kit": {
@@ -478,7 +470,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-jake",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 578767162.42373705
+	"lastBuiltDate": 579438827.40164101
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
