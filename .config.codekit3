@@ -123,71 +123,24 @@
 		"oT": 1,
 		"q": 90
 		},
-	"/images/articles/03-05-2017-Soester-Courant.jpg": {
+	"/images/articles/19-06-2018_rtv.jpg": {
 		"ft": 16384,
-		"iS": 27109,
+		"iS": 85855,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/build/images/articles/03-05-2017-Soester-Courant.jpg",
+		"oAP": "/build/images/articles/19-06-2018_rtv.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
 		"q": 90
 		},
-	"/images/articles/03-08-2016-Soester-Courant.jpg": {
-		"ft": 16384,
-		"iS": 5519870,
-		"jF": 0,
+	"/images/articles/19-06-2018_rtv.mp4": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/images/articles/03-08-2016-Soester-Courant.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 35
-		},
-	"/images/articles/15-07-2016-Gooi-Eemlander.jpg": {
-		"ft": 16384,
-		"iS": 39435,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/images/articles/15-07-2016-Gooi-Eemlander.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/images/articles/18-08-2016-Amersfoort-Nu.jpg": {
-		"ft": 16384,
-		"iS": 212456,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/images/articles/18-08-2016-Amersfoort-Nu.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/images/articles/24-08-2016-Soester-Courant.jpg": {
-		"ft": 16384,
-		"iS": 358632,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/images/articles/24-08-2016-Soester-Courant.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
-		},
-	"/images/articles/27-10-2017-Woord-Vaardig.jpg": {
-		"ft": 16384,
-		"iS": 24040,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/build/images/articles/27-10-2017-Woord-Vaardig.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 1,
-		"q": 90
+		"oAP": "/build/images/articles/19-06-2018_rtv.mp4",
+		"oF": 0
 		},
 	"/images/header.jpg": {
 		"ft": 16384,
@@ -451,6 +404,14 @@
 		"oAP": "/build/publicaties.html",
 		"oF": 0
 		},
+	"/publicaties/19-06-2018_rtv.kit": {
+		"cB": 1,
+		"ft": 2048,
+		"hM": 1,
+		"oA": 0,
+		"oAP": "/build/publicaties/19-06-2018_rtv.html",
+		"oF": 0
+		},
 	"/voorwaarden.kit": {
 		"cB": 1,
 		"ft": 2048,
@@ -468,9 +429,9 @@
 	"creationDate": 578766492.33941996,
 	"displayValue": "TA-Nuth",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-jake",
-	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 579438827.40164101
+	"iconImageName": "meme-ive",
+	"iconImageWasSetByUser": 1,
+	"lastBuiltDate": 579988715.387151
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
