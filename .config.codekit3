@@ -276,7 +276,7 @@
 		},
 	"/images/team/hossein.jpg": {
 		"ft": 16384,
-		"iS": 12858124,
+		"iS": 148979,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/build/images/team/hossein.jpg",
@@ -431,7 +431,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ive",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 579989636.38746595
+	"lastBuiltDate": 581340988.39701605
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
