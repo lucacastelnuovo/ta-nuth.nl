@@ -12,7 +12,7 @@
 	"/afspraak.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/afspraak.html",
 		"oF": 0
@@ -26,7 +26,7 @@
 	"/copyright.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/copyright.html",
 		"oF": 0
@@ -276,7 +276,7 @@
 		},
 	"/images/team/hossein.jpg": {
 		"ft": 16384,
-		"iS": 12858124,
+		"iS": 148979,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/build/images/team/hossein.jpg",
@@ -321,7 +321,7 @@
 	"/includes/_footer.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/includes/_footer.html",
 		"oF": 0
@@ -329,7 +329,7 @@
 	"/includes/_header.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/includes/_header.html",
 		"oF": 0
@@ -337,7 +337,7 @@
 	"/includes/_navbar.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/build/includes/_navbar.html",
 		"oF": 0
@@ -345,7 +345,7 @@
 	"/index.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/index.html",
 		"oF": 0
@@ -383,7 +383,7 @@
 	"/over-mij.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/over-mij.html",
 		"oF": 0
@@ -391,7 +391,7 @@
 	"/privacy.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/privacy.html",
 		"oF": 0
@@ -399,7 +399,7 @@
 	"/publicaties.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/publicaties.html",
 		"oF": 0
@@ -407,7 +407,7 @@
 	"/publicaties/19-06-2018_rtv.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/publicaties/19-06-2018_rtv.html",
 		"oF": 0
@@ -415,7 +415,7 @@
 	"/voorwaarden.kit": {
 		"cB": 1,
 		"ft": 2048,
-		"hM": 1,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/build/voorwaarden.html",
 		"oF": 0
@@ -431,7 +431,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ive",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 581348573.95223498
+	"lastBuiltDate": 582058752.425367
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2327,7 +2327,7 @@
 		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
 		"shouldRunCacheBuster": 1,
-		"shouldRunHTMLMinifier": 1
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
