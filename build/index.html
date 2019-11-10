@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="manifest" href="/manifest.json?ckcachebust=55158a27081dc36ddd3044fe2c3a108e" />
+        <link rel="manifest" href="/manifest.json?ckcachebust=75ba418076c381e9ed535d763cdf5042" />
         <meta name="theme-color" content="#F41C1B" />
 
         <title>TechAssistants Nuth</title>
@@ -27,10 +27,10 @@
         <meta name="googlebot" content="index,follow" />
 
         <!-- Favicons/Icons -->
-        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=b28ac15a64a73a368716b0818e4bcef1" />
-        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=343d2f61c976a9ca4f6369b116a460bb" />
-        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=7dc38b6ce4165a8b5e2b91f884411025" />
-        <link rel="mask-icon" href="/favicon.png?ckcachebust=244368e0fcd0eeec1050a0a83015271e" color="green" />
+        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=d1383ff8e9e51eade6a16fe7be88c0e6" />
+        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=70e9771e8ce8e690c745c3866851d1de" />
+        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=aca960b59c638a097e912abd0ea7ac13" />
+        <link rel="mask-icon" href="/favicon.png?ckcachebust=3c4e3fe3c8dde895b5ff1950d888131e" color="green" />
 
         <!--Import Materialize CSS-->
         <link
@@ -44,7 +44,7 @@
         />
 
         <!--Import Custom CSS-->
-        <link rel="stylesheet" href="/css/style.css?ckcachebust=486e0eddab4085d8b4b02eb362e676b4" />
+        <link rel="stylesheet" href="/css/style.css?ckcachebust=6600fcd3850558c9d557b28a1f1ed0b0" />
 
         <!--Import Google Icon Font-->
         <link
@@ -227,7 +227,7 @@
     </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595103182" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595104303" async defer></script>
 <script>
   function validEmail(email) {
     const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -293,12 +293,12 @@
       .then(() => {
         form.style.display = "none";
         if (
-          !document.querySelector("#captcha_invalid").style.display === "block"
+          document.querySelector("#captcha_invalid").style.display !== "block"
         ) {
           document.querySelector("#thankyou_message").style.display = "block";
         }
       })
-      .catch(error => {
+      .catch(() => {
         document.querySelector("#captcha_invalid").style.display = "block";
         buttonsState(true, form);
       });
@@ -336,7 +336,7 @@
 </body>
 
 <!--Import Materialize JavaScript-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595103182"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595104303"></script>
 <!--Init Materialize Components-->
 <script>
     //Mobile Side nav

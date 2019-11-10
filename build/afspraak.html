@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="manifest" href="/manifest.json?ckcachebust=e60f791131114ae3d561c8505c39f77a" />
+        <link rel="manifest" href="/manifest.json?ckcachebust=e0efe0eae775233d0dce16a36be818b8" />
         <meta name="theme-color" content="#F41C1B" />
 
         <title>Afspraak Maken || TechAssistants Nuth</title>
@@ -27,10 +27,10 @@
         <meta name="googlebot" content="index,follow" />
 
         <!-- Favicons/Icons -->
-        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=f85a317ae1a8c7486c7a496712a99fd4" />
-        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=bb86e8cbfa0c3420bc1f905bf4767bf7" />
-        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=5e3c993c323d0f51f667c33b912be834" />
-        <link rel="mask-icon" href="/favicon.png?ckcachebust=3a11fce5f78e6051a2bbda0fdd0372fa" color="green" />
+        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=97daaf39a2f9455fcd85589fcf331d71" />
+        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=8c9e0f16d34fe1cc68c49d25cd0d044b" />
+        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=79935548bcd5199c87a11fd4ded718d8" />
+        <link rel="mask-icon" href="/favicon.png?ckcachebust=57f66bc9456615813a500bdec03a0972" color="green" />
 
         <!--Import Materialize CSS-->
         <link
@@ -44,7 +44,7 @@
         />
 
         <!--Import Custom CSS-->
-        <link rel="stylesheet" href="/css/style.css?ckcachebust=e4dcf914591d9c06cc56e83719bdcbe8" />
+        <link rel="stylesheet" href="/css/style.css?ckcachebust=984c9bacf08c43ed50cf1421b0ceb3c3" />
 
         <!--Import Google Icon Font-->
         <link
@@ -161,13 +161,13 @@
           <div class="row">
             <div class="input-field col s12">
               <textarea
-                id="problem"
+                id="message"
                 class="materialize-textarea"
                 placeholder="Mijn computer start heel traag op"
-                name="description"
+                name="message"
                 required
               ></textarea>
-              <label for="problem">Probleemomschrijving</label>
+              <label for="message">Probleemomschrijving</label>
             </div>
           </div>
           <div class="row">
@@ -185,7 +185,7 @@
   </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595103182" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595104665" async defer></script>
 <script>
   function validEmail(email) {
     const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -251,12 +251,12 @@
       .then(() => {
         form.style.display = "none";
         if (
-          !document.querySelector("#captcha_invalid").style.display === "block"
+          document.querySelector("#captcha_invalid").style.display !== "block"
         ) {
           document.querySelector("#thankyou_message").style.display = "block";
         }
       })
-      .catch(error => {
+      .catch(() => {
         document.querySelector("#captcha_invalid").style.display = "block";
         buttonsState(true, form);
       });
@@ -294,7 +294,7 @@
 </body>
 
 <!--Import Materialize JavaScript-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595103182"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595104665"></script>
 <!--Init Materialize Components-->
 <script>
     //Mobile Side nav
