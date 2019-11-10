@@ -17,14 +17,6 @@
 		"oAP": "/build/.gitignore",
 		"oF": 0
 		},
-	"/.prettierrc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/.prettierrc",
-		"oF": 0
-		},
 	"/_headers": {
 		"cB": 0,
 		"ft": 8192,
@@ -493,7 +485,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ive",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 595097141.94929194
+	"lastBuiltDate": 595098786.99585295
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
