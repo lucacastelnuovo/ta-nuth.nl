@@ -17,6 +17,14 @@
 		"oAP": "/build/.gitignore",
 		"oF": 0
 		},
+	"/.prettierrc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/.prettierrc",
+		"oF": 0
+		},
 	"/_headers": {
 		"cB": 0,
 		"ft": 8192,
