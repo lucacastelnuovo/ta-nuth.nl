@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="manifest" href="/manifest.json?ckcachebust=4d881c51a40c180c99ff9ca5054a49bf" />
+        <link rel="manifest" href="/manifest.json?ckcachebust=55158a27081dc36ddd3044fe2c3a108e" />
         <meta name="theme-color" content="#F41C1B" />
 
         <title>TechAssistants Nuth</title>
@@ -27,10 +27,10 @@
         <meta name="googlebot" content="index,follow" />
 
         <!-- Favicons/Icons -->
-        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=38dd176e82580d38776f6cc02f4ec714" />
-        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=0cc2fc76788a3da19f30240aea3caa2d" />
-        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=1b928e6389fbbb5b03a79ada86fb0e99" />
-        <link rel="mask-icon" href="/favicon.png?ckcachebust=9a88a4f010c49a7a462ded0469896a07" color="green" />
+        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=b28ac15a64a73a368716b0818e4bcef1" />
+        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=343d2f61c976a9ca4f6369b116a460bb" />
+        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=7dc38b6ce4165a8b5e2b91f884411025" />
+        <link rel="mask-icon" href="/favicon.png?ckcachebust=244368e0fcd0eeec1050a0a83015271e" color="green" />
 
         <!--Import Materialize CSS-->
         <link
@@ -44,7 +44,7 @@
         />
 
         <!--Import Custom CSS-->
-        <link rel="stylesheet" href="/css/style.css?ckcachebust=032347931228d6af2cde91e9cc27aafd" />
+        <link rel="stylesheet" href="/css/style.css?ckcachebust=486e0eddab4085d8b4b02eb362e676b4" />
 
         <!--Import Google Icon Font-->
         <link
@@ -227,97 +227,82 @@
     </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595098785" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595103182" async defer></script>
 <script>
-    function validEmail(email) {
-        const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-        return re.test(email);
+  function validEmail(email) {
+    const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+  }
+  function buttonsState(active, form) {
+    const buttons = form.querySelectorAll("button");
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = !active;
     }
-    function buttonsState(active, form) {
-        const buttons = form.querySelectorAll('button');
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].disabled = !active;
+  }
+
+  function getFormData(form) {
+    const elements = form.elements;
+    const fields = Object.keys(elements)
+      .map(function(k) {
+        if (elements[k].name !== undefined) {
+          return elements[k].name;
+        } else if (elements[k].length > 0) {
+          return elements[k].item(0).name;
         }
-    }
+      })
+      .filter(function(item, pos, self) {
+        return self.indexOf(item) == pos && item;
+      });
 
-    function getFormData(form) {
-        const elements = form.elements;
-        const fields = Object.keys(elements)
-            .map(function(k) {
-                if (elements[k].name !== undefined) {
-                    return elements[k].name;
-                } else if (elements[k].length > 0) {
-                    return elements[k].item(0).name;
-                }
-            })
-            .filter(function(item, pos, self) {
-                return self.indexOf(item) == pos && item;
-            });
+    const formData = {};
+    fields.forEach(function(name) {
+      const element = elements[name];
+      formData[name] = element.value;
 
-        const formData = {};
-        fields.forEach(function(name) {
-            const element = elements[name];
-            formData[name] = element.value;
-
-            if (element.length) {
-                const data = [];
-                for (const i = 0; i < element.length; i++) {
-                    const item = element.item(i);
-                    if (item.checked || item.selected) {
-                        data.push(item.value);
-                    }
-                }
-                formData[name] = data.join(', ');
-            }
-        });
-
-        return formData;
-    }
-
-    function handleFormSubmit() {
-        const form = document.querySelector('form');
-        const data = getFormData(form);
-
-        if (!validEmail(data.email)) {
-            document.querySelector('#email_invalid').style.display = 'block';
-            return false;
+      if (element.length) {
+        const data = [];
+        for (const i = 0; i < element.length; i++) {
+          const item = element.item(i);
+          if (item.checked || item.selected) {
+            data.push(item.value);
+          }
         }
+        formData[name] = data.join(", ");
+      }
+    });
 
-        document.querySelector('#email_invalid').style.display = 'none';
+    return formData;
+  }
 
-        buttonsState(false, form);
-        const xhr = new XMLHttpRequest();
+  function handleFormSubmit() {
+    const form = document.querySelector("form");
+    const data = getFormData(form);
 
-        xhr.open('POST', form.action);
-        xhr.setRequestHeader(
-            'Content-Type',
-            'application/x-www-form-urlencoded'
-        );
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState !== 4) {
-                document.querySelector('#captcha_invalid').style.display =
-                    'block';
-                buttonsState(true, form);
-
-                return false;
-            }
-
-            form.style.display = 'none';
-            document.querySelector('#thankyou_message').style.display = 'block';
-
-            return;
-        };
-
-        const encoded = Object.keys(data)
-            .map(function(k) {
-                return (
-                    encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-                );
-            })
-            .join('&');
-        xhr.send(encoded);
+    if (!validEmail(data.email)) {
+      document.querySelector("#email_invalid").style.display = "block";
+      return false;
     }
+
+    document.querySelector("#email_invalid").style.display = "none";
+    buttonsState(false, form);
+
+    fetch(form.action, {
+      method: "post",
+      body: JSON.stringify(data)
+    })
+      .then(() => {
+        form.style.display = "none";
+        if (
+          !document.querySelector("#captcha_invalid").style.display === "block"
+        ) {
+          document.querySelector("#thankyou_message").style.display = "block";
+        }
+      })
+      .catch(error => {
+        document.querySelector("#captcha_invalid").style.display = "block";
+        buttonsState(true, form);
+      });
+  }
 </script>
 
 </main>
@@ -351,7 +336,7 @@
 </body>
 
 <!--Import Materialize JavaScript-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595098785"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595103182"></script>
 <!--Init Materialize Components-->
 <script>
     //Mobile Side nav

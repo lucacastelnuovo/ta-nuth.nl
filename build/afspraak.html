@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="manifest" href="/manifest.json?ckcachebust=112479de82fe8a104d50c058a8d00a75" />
+        <link rel="manifest" href="/manifest.json?ckcachebust=e60f791131114ae3d561c8505c39f77a" />
         <meta name="theme-color" content="#F41C1B" />
 
         <title>Afspraak Maken || TechAssistants Nuth</title>
@@ -27,10 +27,10 @@
         <meta name="googlebot" content="index,follow" />
 
         <!-- Favicons/Icons -->
-        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=595098785" />
-        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=595098785" />
-        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=595098785" />
-        <link rel="mask-icon" href="/favicon.png?ckcachebust=595098785" color="green" />
+        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=f85a317ae1a8c7486c7a496712a99fd4" />
+        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=bb86e8cbfa0c3420bc1f905bf4767bf7" />
+        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=5e3c993c323d0f51f667c33b912be834" />
+        <link rel="mask-icon" href="/favicon.png?ckcachebust=3a11fce5f78e6051a2bbda0fdd0372fa" color="green" />
 
         <!--Import Materialize CSS-->
         <link
@@ -44,7 +44,7 @@
         />
 
         <!--Import Custom CSS-->
-        <link rel="stylesheet" href="/css/style.css?ckcachebust=dc9f336aeddccbf44902f6aa794cfdb1" />
+        <link rel="stylesheet" href="/css/style.css?ckcachebust=e4dcf914591d9c06cc56e83719bdcbe8" />
 
         <!--Import Google Icon Font-->
         <link
@@ -108,202 +108,159 @@
 
 
 <div class="section">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h2 class="header">Afspraak Maken</h2>
+        <p>
+          Vul AUB dit formulier in dan bellen wij u zo snel mogelijk om een
+          afspraak te maken.
+        </p>
         <div class="row">
-            <div class="col s12">
-                <h2 class="header">Afspraak Maken</h2>
-                <p>
-                    Vul AUB dit formulier in dan bellen wij u zo snel mogelijk
-                    om een afspraak te maken.
-                </p>
-                <div class="row">
-                    <div
-                        id="thankyou_message"
-                        style="display:none;"
-                        class="col s12"
-                    >
-                        <h6 class="btn-small disabled">
-                            Uw bericht is verstuurd!
-                        </h6>
-                    </div>
-                    <div
-                        id="captcha_invalid"
-                        style="display:none;"
-                        class="col s12"
-                    >
-                        <h6 class="btn-small disabled">
-                            Probeer AUB opnieuw!
-                        </h6>
-                    </div>
-                </div>
-                <form action="/.netlify/functions/send-email">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="name" type="text" name="name" required />
-                            <label for="name">Voornaam Achternaam</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input
-                                id="email"
-                                type="email"
-                                name="email"
-                                required
-                            />
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input
-                                id="phone"
-                                type="tel"
-                                name="phone"
-                                required
-                            />
-                            <label for="phone">Telefoon</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 l6">
-                            <input
-                                id="postalcode"
-                                type="text"
-                                name="postalcode"
-                                required
-                            />
-                            <label for="postalcode">Postcode</label>
-                        </div>
-                        <div class="input-field col s12 l6">
-                            <input
-                                id="house"
-                                type="text"
-                                name="house"
-                                required
-                            />
-                            <label for="house">Huisnummer</label>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea
-                                id="problem"
-                                class="materialize-textarea"
-                                placeholder="Mijn computer start heel traag op"
-                                name="description"
-                                required
-                            ></textarea>
-                            <label for="problem">Probleemomschrijving</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button
-                            class="g-recaptcha btn waves-effect waves-light color-primary--background"
-                            data-sitekey="6LeB8MEUAAAAAFXzSJuIvopJP0D22uAC_GibgdGQ"
-                            data-callback="handleFormSubmit"
-                        >
-                            Verstuur<i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                </form>
-            </div>
+          <div id="thankyou_message" style="display:none;" class="col s12">
+            <h6 class="btn-small disabled">
+              Uw bericht is verstuurd!
+            </h6>
+          </div>
+          <div id="captcha_invalid" style="display:none;" class="col s12">
+            <h6 class="btn-small disabled">
+              Probeer AUB opnieuw!
+            </h6>
+          </div>
         </div>
+        <form action="/.netlify/functions/send-email">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" name="name" required />
+              <label for="name">Voornaam Achternaam</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" name="email" required />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="phone" type="tel" name="phone" required />
+              <label for="phone">Telefoon</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 l6">
+              <input id="postalcode" type="text" name="postalcode" required />
+              <label for="postalcode">Postcode</label>
+            </div>
+            <div class="input-field col s12 l6">
+              <input id="house" type="text" name="house" required />
+              <label for="house">Huisnummer</label>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea
+                id="problem"
+                class="materialize-textarea"
+                placeholder="Mijn computer start heel traag op"
+                name="description"
+                required
+              ></textarea>
+              <label for="problem">Probleemomschrijving</label>
+            </div>
+          </div>
+          <div class="row">
+            <button
+              class="g-recaptcha btn waves-effect waves-light color-primary--background"
+              data-sitekey="6LeA8cEUAAAAALriCxV3udXhq2NWCBhXUldcVIgA"
+              data-callback="handleFormSubmit"
+            >
+              Verstuur<i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595098785" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595103182" async defer></script>
 <script>
-    function validEmail(email) {
-        const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-        return re.test(email);
+  function validEmail(email) {
+    const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+  }
+  function buttonsState(active, form) {
+    const buttons = form.querySelectorAll("button");
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = !active;
     }
-    function buttonsState(active, form) {
-        const buttons = form.querySelectorAll('button');
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].disabled = !active;
+  }
+
+  function getFormData(form) {
+    const elements = form.elements;
+    const fields = Object.keys(elements)
+      .map(function(k) {
+        if (elements[k].name !== undefined) {
+          return elements[k].name;
+        } else if (elements[k].length > 0) {
+          return elements[k].item(0).name;
         }
-    }
+      })
+      .filter(function(item, pos, self) {
+        return self.indexOf(item) == pos && item;
+      });
 
-    function getFormData(form) {
-        const elements = form.elements;
-        const fields = Object.keys(elements)
-            .map(function(k) {
-                if (elements[k].name !== undefined) {
-                    return elements[k].name;
-                } else if (elements[k].length > 0) {
-                    return elements[k].item(0).name;
-                }
-            })
-            .filter(function(item, pos, self) {
-                return self.indexOf(item) == pos && item;
-            });
+    const formData = {};
+    fields.forEach(function(name) {
+      const element = elements[name];
+      formData[name] = element.value;
 
-        const formData = {};
-        fields.forEach(function(name) {
-            const element = elements[name];
-            formData[name] = element.value;
-
-            if (element.length) {
-                const data = [];
-                for (const i = 0; i < element.length; i++) {
-                    const item = element.item(i);
-                    if (item.checked || item.selected) {
-                        data.push(item.value);
-                    }
-                }
-                formData[name] = data.join(', ');
-            }
-        });
-
-        return formData;
-    }
-
-    function handleFormSubmit() {
-        const form = document.querySelector('form');
-        const data = getFormData(form);
-
-        if (!validEmail(data.email)) {
-            document.querySelector('#email_invalid').style.display = 'block';
-            return false;
+      if (element.length) {
+        const data = [];
+        for (const i = 0; i < element.length; i++) {
+          const item = element.item(i);
+          if (item.checked || item.selected) {
+            data.push(item.value);
+          }
         }
+        formData[name] = data.join(", ");
+      }
+    });
 
-        document.querySelector('#email_invalid').style.display = 'none';
+    return formData;
+  }
 
-        buttonsState(false, form);
-        const xhr = new XMLHttpRequest();
+  function handleFormSubmit() {
+    const form = document.querySelector("form");
+    const data = getFormData(form);
 
-        xhr.open('POST', form.action);
-        xhr.setRequestHeader(
-            'Content-Type',
-            'application/x-www-form-urlencoded'
-        );
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState !== 4) {
-                document.querySelector('#captcha_invalid').style.display =
-                    'block';
-                buttonsState(true, form);
-
-                return false;
-            }
-
-            form.style.display = 'none';
-            document.querySelector('#thankyou_message').style.display = 'block';
-
-            return;
-        };
-
-        const encoded = Object.keys(data)
-            .map(function(k) {
-                return (
-                    encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-                );
-            })
-            .join('&');
-        xhr.send(encoded);
+    if (!validEmail(data.email)) {
+      document.querySelector("#email_invalid").style.display = "block";
+      return false;
     }
+
+    document.querySelector("#email_invalid").style.display = "none";
+    buttonsState(false, form);
+
+    fetch(form.action, {
+      method: "post",
+      body: JSON.stringify(data)
+    })
+      .then(() => {
+        form.style.display = "none";
+        if (
+          !document.querySelector("#captcha_invalid").style.display === "block"
+        ) {
+          document.querySelector("#thankyou_message").style.display = "block";
+        }
+      })
+      .catch(error => {
+        document.querySelector("#captcha_invalid").style.display = "block";
+        buttonsState(true, form);
+      });
+  }
 </script>
 
 </main>
@@ -337,7 +294,7 @@
 </body>
 
 <!--Import Materialize JavaScript-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595098785"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595103182"></script>
 <!--Init Materialize Components-->
 <script>
     //Mobile Side nav
