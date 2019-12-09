@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="manifest" href="/manifest.json?ckcachebust=e0efe0eae775233d0dce16a36be818b8" />
+        <link rel="manifest" href="/manifest.json?ckcachebust=597603199" />
         <meta name="theme-color" content="#F41C1B" />
 
         <title>Afspraak Maken || TechAssistants Nuth</title>
@@ -27,10 +27,10 @@
         <meta name="googlebot" content="index,follow" />
 
         <!-- Favicons/Icons -->
-        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=97daaf39a2f9455fcd85589fcf331d71" />
-        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=8c9e0f16d34fe1cc68c49d25cd0d044b" />
-        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=79935548bcd5199c87a11fd4ded718d8" />
-        <link rel="mask-icon" href="/favicon.png?ckcachebust=57f66bc9456615813a500bdec03a0972" color="green" />
+        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=d1f5b4df56d9c063079551c00ef0d7bb" />
+        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=597603199" />
+        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=597603199" />
+        <link rel="mask-icon" href="/favicon.png?ckcachebust=597603199" color="green" />
 
         <!--Import Materialize CSS-->
         <link
@@ -44,7 +44,7 @@
         />
 
         <!--Import Custom CSS-->
-        <link rel="stylesheet" href="/css/style.css?ckcachebust=984c9bacf08c43ed50cf1421b0ceb3c3" />
+        <link rel="stylesheet" href="/css/style.css?ckcachebust=5db21ae5e09e42e7bfcf6c1d49e196ad" />
 
         <!--Import Google Icon Font-->
         <link
@@ -128,7 +128,7 @@
             </h6>
           </div>
         </div>
-        <form action="/.netlify/functions/send-email">
+        <form action="https://netlify.lucacastelnuovo.nl/api/send-email">
           <div class="row">
             <div class="input-field col s12">
               <input id="name" type="text" name="name" required />
@@ -185,83 +185,8 @@
   </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?ckcachebust=595104665" async defer></script>
-<script>
-  function validEmail(email) {
-    const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    return re.test(email);
-  }
-  function buttonsState(active, form) {
-    const buttons = form.querySelectorAll("button");
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = !active;
-    }
-  }
-
-  function getFormData(form) {
-    const elements = form.elements;
-    const fields = Object.keys(elements)
-      .map(function(k) {
-        if (elements[k].name !== undefined) {
-          return elements[k].name;
-        } else if (elements[k].length > 0) {
-          return elements[k].item(0).name;
-        }
-      })
-      .filter(function(item, pos, self) {
-        return self.indexOf(item) == pos && item;
-      });
-
-    const formData = {};
-    fields.forEach(function(name) {
-      const element = elements[name];
-      formData[name] = element.value;
-
-      if (element.length) {
-        const data = [];
-        for (const i = 0; i < element.length; i++) {
-          const item = element.item(i);
-          if (item.checked || item.selected) {
-            data.push(item.value);
-          }
-        }
-        formData[name] = data.join(", ");
-      }
-    });
-
-    return formData;
-  }
-
-  function handleFormSubmit() {
-    const form = document.querySelector("form");
-    const data = getFormData(form);
-
-    if (!validEmail(data.email)) {
-      document.querySelector("#email_invalid").style.display = "block";
-      return false;
-    }
-
-    document.querySelector("#email_invalid").style.display = "none";
-    buttonsState(false, form);
-
-    fetch(form.action, {
-      method: "post",
-      body: JSON.stringify(data)
-    })
-      .then(() => {
-        form.style.display = "none";
-        if (
-          document.querySelector("#captcha_invalid").style.display !== "block"
-        ) {
-          document.querySelector("#thankyou_message").style.display = "block";
-        }
-      })
-      .catch(() => {
-        document.querySelector("#captcha_invalid").style.display = "block";
-        buttonsState(true, form);
-      });
-  }
-</script>
+<script src="https://www.google.com/recaptcha/api.js?ckcachebust=597603199" async defer></script>
+<script src="https://ltc-api.netlify.com/send-email.js?ckcachebust=597603199"></script>
 
 </main>
 <footer class="page-footer color-primary--background hover-disable">
@@ -294,7 +219,7 @@
 </body>
 
 <!--Import Materialize JavaScript-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=595104665"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=597603199"></script>
 <!--Init Materialize Components-->
 <script>
     //Mobile Side nav
