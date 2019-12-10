@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="manifest" href="/manifest.json?ckcachebust=a472d91de75ce6b7eafe60a204417080" />
+        <link rel="manifest" href="/manifest.json?ckcachebust=597689685" />
         <meta name="theme-color" content="#F41C1B" />
 
         <title>TechAssistants Nuth</title>
@@ -27,10 +27,10 @@
         <meta name="googlebot" content="index,follow" />
 
         <!-- Favicons/Icons -->
-        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=de4ffd05d7aca090fa038d1aab1c4d73" />
-        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=597689071" />
-        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=597689071" />
-        <link rel="mask-icon" href="/favicon.png?ckcachebust=597689071" color="green" />
+        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=6b0583684b74b4add676d0651259f634" />
+        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=1b348ecd0cda5d2b4cfc02df823a6917" />
+        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=1513dd0d825b1ad4ed9288b083a80b72" />
+        <link rel="mask-icon" href="/favicon.png?ckcachebust=bc4980766b024dba970d7c63ccd46b54" color="green" />
 
         <!--Import Materialize CSS-->
         <link
@@ -44,7 +44,7 @@
         />
 
         <!--Import Custom CSS-->
-        <link rel="stylesheet" href="/css/style.css?ckcachebust=883adfeb9e2a158902af8d7cf0430590" />
+        <link rel="stylesheet" href="/css/style.css?ckcachebust=370ff26185240f57d6e0d208eba6e2f5" />
 
         <!--Import Google Icon Font-->
         <link
@@ -261,7 +261,7 @@
         document.querySelector("#email_invalid").style.display = "none";
         buttonsState(false, form);
 
-        fetch(form.getAttribute("action"), {
+        fetch("/", {
             method: "POST",
             headers: {
                 Accept: "application/x-www-form-urlencoded;charset=UTF-8",
@@ -271,7 +271,7 @@
             body: new URLSearchParams(formData).toString()
         })
             .then(res => {
-                if (response.status !== 200) {
+                if (res.status !== 200) {
                     throw new Error("Not 200 response");
                 }
 
@@ -318,7 +318,7 @@
 </body>
 
 <!--Import Materialize JavaScript-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=597689071"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=597689685"></script>
 <!--Init Materialize Components-->
 <script>
     //Mobile Side nav
