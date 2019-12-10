@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="manifest" href="/manifest.json?ckcachebust=f0fcd8f9a53afbbdc434bf5930b958bb" />
+        <link rel="manifest" href="/manifest.json?ckcachebust=f05c6edb6d6a51fe8cdab0a8c14af293" />
         <meta name="theme-color" content="#F41C1B" />
 
         <title>Afspraak Maken || TechAssistants Nuth</title>
@@ -27,10 +27,10 @@
         <meta name="googlebot" content="index,follow" />
 
         <!-- Favicons/Icons -->
-        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=6464d8e839760b187327c52e6f35d1f0" />
-        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=c3f67dc74f15343c51815e16b9a8896e" />
-        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=e32bed59c4243c562e8f6cabeb934471" />
-        <link rel="mask-icon" href="/favicon.png?ckcachebust=83652eb9fd873e5570244676dc84d203" color="green" />
+        <link rel="shortcut icon" href="/favicon.ico?ckcachebust=1be650ad0c534cce0bbd3bc743f6da52" />
+        <link rel="icon" sizes="192x192" href="/favicon.png?ckcachebust=298b2c468af88464ae03a58567ce26fe" />
+        <link rel="apple-touch-icon" href="/favicon.png?ckcachebust=cb476744208e81fc9aa05faf41f247c9" />
+        <link rel="mask-icon" href="/favicon.png?ckcachebust=95e332587287ce09048595016f154c11" color="green" />
 
         <!--Import Materialize CSS-->
         <link
@@ -44,7 +44,7 @@
         />
 
         <!--Import Custom CSS-->
-        <link rel="stylesheet" href="/css/style.css?ckcachebust=eb51f6e35ce255b33144cb2efc1c26cb" />
+        <link rel="stylesheet" href="/css/style.css?ckcachebust=7deb09cb6267e51766d98454bc998d39" />
 
         <!--Import Google Icon Font-->
         <link
@@ -108,89 +108,170 @@
 
 
 <div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <h2 class="header">Afspraak Maken</h2>
-        <p>
-          Vul AUB dit formulier in dan bellen wij u zo snel mogelijk om een
-          afspraak te maken.
-        </p>
+    <div class="container">
         <div class="row">
-          <div id="thankyou_message" style="display:none;" class="col s12">
-            <h6 class="btn-small disabled">
-              Uw bericht is verstuurd!
-            </h6>
-          </div>
-          <div id="captcha_invalid" style="display:none;" class="col s12">
-            <h6 class="btn-small disabled">
-              Probeer AUB opnieuw!
-            </h6>
-          </div>
+            <div class="col s12">
+                <h2 class="header">Afspraak Maken</h2>
+                <p>
+                    Vul AUB dit formulier in dan bellen wij u zo snel mogelijk
+                    om een afspraak te maken.
+                </p>
+                <div class="row">
+                    <div
+                        id="thankyou_message"
+                        style="display:none;"
+                        class="col s12"
+                    >
+                        <h6 class="btn-small disabled">
+                            Uw bericht is verstuurd!
+                        </h6>
+                    </div>
+                    <div
+                        id="submission_invalid"
+                        style="display:none;"
+                        class="col s12"
+                    >
+                        <h6 class="btn-small disabled">
+                            Probeer AUB opnieuw!
+                        </h6>
+                    </div>
+                </div>
+                <form
+                    name="afspraak"
+                    method="POST"
+                    action="/afspraak"
+                    data-netlify-recaptcha="true"
+                    data-netlify="true"
+                >
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="name" type="text" name="name" required />
+                            <label for="name">Voornaam Achternaam</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                required
+                            />
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input
+                                id="phone"
+                                type="tel"
+                                name="phone"
+                                required
+                            />
+                            <label for="phone">Telefoon</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l6">
+                            <input
+                                id="postalcode"
+                                type="text"
+                                name="postalcode"
+                                required
+                            />
+                            <label for="postalcode">Postcode</label>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <input
+                                id="house"
+                                type="text"
+                                name="house"
+                                required
+                            />
+                            <label for="house">Huisnummer</label>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea
+                                id="message"
+                                class="materialize-textarea"
+                                placeholder="Mijn computer start heel traag op"
+                                name="message"
+                                required
+                            ></textarea>
+                            <label for="message">Probleemomschrijving</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div data-netlify-recaptcha="true"></div>
+                    </div>
+                    <div class="row">
+                        <button
+                            class="btn waves-effect waves-light color-primary--background"
+                        >
+                            Verstuur<i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <form>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="name" type="text" name="name" required />
-              <label for="name">Voornaam Achternaam</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" name="email" required />
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="phone" type="tel" name="phone" required />
-              <label for="phone">Telefoon</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 l6">
-              <input id="postalcode" type="text" name="postalcode" required />
-              <label for="postalcode">Postcode</label>
-            </div>
-            <div class="input-field col s12 l6">
-              <input id="house" type="text" name="house" required />
-              <label for="house">Huisnummer</label>
-            </div>
-          </div>
-          <br />
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea
-                id="message"
-                class="materialize-textarea"
-                placeholder="Mijn computer start heel traag op"
-                name="message"
-                required
-              ></textarea>
-              <label for="message">Probleemomschrijving</label>
-            </div>
-          </div>
-          <div class="row">
-            <button
-              class="g-recaptcha btn waves-effect waves-light color-primary--background"
-              data-sitekey="6LfJ2MYUAAAAAFm5zTqhH1I-BTcz7hGS3qSLPXPH"
-              data-callback="handleFormSubmit"
-            >
-              Verstuur<i class="material-icons right">send</i>
-            </button>
-          </div>
-        </form>
-      </div>
     </div>
-  </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?ckcachebust=597614503" async defer></script>
 <script>
-  window.CONTACT_EMAIL = "info@ta-nuth.nl";
-  window.TEMPLATE_ID = "d-86909c9d9dba4678a154c4dcde3667cf";
+    function validEmail(email) {
+        const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+    }
+
+    function buttonsState(active, form) {
+        const buttons = form.querySelectorAll("button");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = !active;
+        }
+    }
+
+    let form = document.querySelector("form");
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        console.log("formData", formData);
+
+        if (!validEmail(formData.get("email"))) {
+            document.querySelector("#email_invalid").style.display = "block";
+            return false;
+        }
+
+        document.querySelector("#email_invalid").style.display = "none";
+        buttonsState(false, form);
+
+        fetch(form.getAttribute("action"), {
+            method: "POST",
+            headers: {
+                Accept: "application/x-www-form-urlencoded;charset=UTF-8",
+                "Content-Type":
+                    "application/x-www-form-urlencoded;charset=UTF-8"
+            },
+            body: new URLSearchParams(formData).toString()
+        })
+            .then(res => {
+                if (response.status !== 200) {
+                    throw new Error("Not 200 response");
+                }
+
+                form.style.display = "none";
+                document.querySelector("#thankyou_message").style.display =
+                    "block";
+            })
+            .catch(() => {
+                document.querySelector("#submission_invalid").style.display =
+                    "block";
+                buttonsState(true, form);
+            });
+    });
 </script>
-<script src="https://netlify.lucacastelnuovo.nl/send-email.js?ckcachebust=597614503"></script>
 
 </main>
 <footer class="page-footer color-primary--background hover-disable">
@@ -223,7 +304,7 @@
 </body>
 
 <!--Import Materialize JavaScript-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=597614503"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js?ckcachebust=597689034"></script>
 <!--Init Materialize Components-->
 <script>
     //Mobile Side nav
