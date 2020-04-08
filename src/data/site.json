@@ -1,0 +1,31 @@
+{
+    "name": "TechAssistants Nuth",
+    "shortName": "TAN",
+    "slogan": "Van jong geleerd, is oud gedaan",
+    "url": "https://ta-nuth.nl",
+    "analyticsID": "d8385488-a12d-4ba5-9777-5df4e9e7e82c",
+    "author": {
+        "name": "Luca Castelnuovo",
+        "url": "https://lucacastelnuovo.nl"
+    },
+    "contact": {
+        "address": "Donatusstraat 159, 6361TN Nuth",
+        "email": "info@ta-nuth.nl",
+        "phone": "06 84 12 12 48"
+    },
+    "images": {
+        "favicon": "/images/favicon.png",
+        "logo": "/images/logo.jpg",
+        "header": "/images/header.jpg",
+        "garantie": "/images/oplosgarantie.jpg"
+    },
+    "meta": {
+        "description": "Heeft u moeite met computers, tablets, smartphones, TV, Wi-Fi, internet of een andere vraag? Maak dan snel een afspraak.",
+        "keywords": "TechAssistants Nuth, TechAssistants, techassistance, TechAssistants Soest"
+    },
+    "resources": {
+        "materializeCSS": "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css",
+        "materializeJS": "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js",
+        "materialIcons": "https://fonts.googleapis.com/icon?family=Material+Icons"
+    }
+}

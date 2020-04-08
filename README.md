@@ -1,3 +1,0 @@
-# TA-Nuth
-TechAssistants Nuth
- 
