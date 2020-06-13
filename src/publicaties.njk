@@ -22,19 +22,18 @@ title: Publicaties
                 {% set url %}{{ page.data.url }}{% endset %}
 
                 <div class="col s12">
-                    <div class="card large">
+                    <div class="card">
                         <div class="card-image">
                             <a href="{{ url }}">
                                 <img
                                     src="{{ page.data.image }}"
                                     alt="{{ page.data.title }}"
                                     class="responsive-img"/>
-                                <span class="card-title black-text bolder">{{ page.data.title }}</span>
                             </a>
                         </div>
-                        <span class="card-title black-text bolder">
+                        <p class="card-title black-text bolder flow-text">
                             {{ page.data.title }} - <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLLL d, y") }}</time>
-                        </span>
+                        </p>
                         <div class="card-action">
                             <a href="{{ url }}" class="btn waves-effect waves-light color-primary--background color-secondary">
                                 Lees meer
